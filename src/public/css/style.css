@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color: #e2e2e2;
+}
+
+.btn {
+    border: 0;
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 4px;
+    transition: 0.1s all ease;
+}
+
+.btn-icon {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.btn-icon-inline {
+    background: transparent;
+    padding: 8px 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #387bff;
+    border: 1px solid #387bff;
+}
+
+.btn-primary:hover {
+    background-color: #306add;
+}
+
+.btn-primary:disabled {
+    background: #bdbdbd;
+    border: 1px solid #bdbdbd;
+}
+
+.btn-danger {
+    color: #ff232d;
+    background-color: #ffffff;
+    border: 1px solid #ff232d;
+}
+
+.btn-danger:hover {
+    background-color: #ffebec;
+}
+
+.btn-secondary {
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
+
+.btn-secondary:hover {
+    color: #000;
+    background-color: #efefef;
+    border: 1px solid #000;
+}
+
+.btn-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    -webkit-box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-wrapper {
+    background: #fff;
+    height: 300px;
+    width: 600px;
+    max-width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.75);
+    z-index: 1002;
+}
+
+.modal-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1b1c1e14;
+}
+
+.modal-content-header h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-editor {
+    width: 100%;
+    border: 1px solid #161616;
+    outline: 0;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0 0 0 / 20%);
+    z-index: 1001;
+}
+
+main {
+    padding: 40px;
+}
+
+.note-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.note-list .no-records {
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    color: #b1b1b1;
+    font-size: 1.2rem;
+}
+
+.note-list .no-records .icon {
+    font-size: 4rem;
+}
+
+.note-list .note {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    width: 100%;
+    word-break: break-word;
+}
+
+@media (min-width: 576px) {
+    .note-list .note {
+        width: 30%;
+        margin-right: 20px;
+    }
+}
+
+.note-list .note:hover {
+    cursor: pointer;
+    background-color: #efefef;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top: 4px solid #2377ff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.loader-text {
+    margin-left: 10px;
+    color: #818181;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
